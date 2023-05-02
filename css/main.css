@@ -1,0 +1,565 @@
+/*-------------------------------------------------------------------------
+------------------------------------------------------------------------
+ 
+    Table of Contents
+
+    01. Fonts Section
+    02. General Section
+    03. Author's Style Section
+    04. Extra Css Section
+  
+  -------------------------------------------------------------------------*/
+/* ==========================================================================
+   Fonts Section
+   ========================================================================== */
+/*@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700|Roboto:400,500');*/
+
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans|Open+Sans:400,600,700');
+/* ==========================================================================
+   General Section
+   ========================================================================== */
+
+html,
+body {
+    height: 100%
+}
+body {
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    background: rgb(223, 223, 219);
+    color: light grey;
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid cyan;
+    margin: 1em 0;
+    padding: 0;
+}
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+}
+a:focus {
+    outline: 0 solid;
+}
+a:hover {
+    text-decoration: none;
+}
+/* Remove Chrome Input Field's Unwanted Yellow Background Color */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {-webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+p {
+    line-height: 1.6;
+}
+ul {
+    list-style: none;
+}
+textarea {
+    resize: vertical;
+}
+.page_title h2 {
+    color: red;
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+    font-size: 5rem;
+}
+.section_padding {
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+/* ==========================================================================
+   Author's Style Section
+   ========================================================================== */
+/*
+-----------------------------------------
+Preloader Section
+-----------------------------------------
+*/
+
+.preloader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    background-color: orange;
+}
+.square-container {
+    width: 400px;
+    height: 200px;
+    /*   background: red; */
+    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.square-container:after {
+    content: '';
+    width: 20px;
+    height: 5px;
+    position: absolute;
+    background: gold;
+    border-radius: 50%;
+    bottom: 0;
+    left: 50%;
+    opacity: 0.7;
+    filter: blur(1px);
+    animation: shadow 2s linear infinite;
+}
+.square-container:nth-child(2):after {
+    animation-delay: -.2s;
+}
+.square-container:nth-child(3):after {
+    animation-delay: -.6s;
+}
+.square {
+    width: 15px;
+    height: 15px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    animation: anim 5s linear infinite;
+}
+.square-container:nth-child(2) .square {
+    /*   display: none; */
+    
+    animation-delay: -.3s;
+}
+.square-container:nth-child(3) .square {
+    /*   display: none; */
+    
+    animation-delay: -.6s;
+}
+@keyframes anim {
+    50% {
+        transform-origin: 400% 50%;
+        transform: rotate(360deg);
+    }
+    50% {
+        transform-origin: 400% 50%;
+        transform: rotate(360deg);
+    }
+    50.1% {
+        transform-origin: -300% 50%;
+        transfotm: rotate(0deg);
+    }
+    100% {
+        transform-origin: -300% 50%;
+        transfotm: rotate(-360deg);
+    }
+}
+@keyframes shadow {
+    25% {} 12.5% {
+        transform: translate(50px) scale(0.6);
+    }
+    25% {
+        transform: translate(110px);
+    }
+    37.5% {
+        transform: translate(50px) scale(1.4);
+    }
+    50% {
+        transform: translate(0px);
+    }
+    62.5% {
+        transform: translate(-50px) scale(0.6);
+    }
+    75% {
+        transform: translate(-110px);
+    }
+    87.5% {
+        transform: translate(-50px) scale(1.4);
+    }
+    100% {
+        transform: translate(0px);
+    }
+}
+/*
+-----------------------------------------
+Home Section
+-----------------------------------------
+*/
+
+.home {
+    height: 100%;
+}
+/*Logo
+====================*/
+
+.logo {
+    color:rgb(235, 221, 28) ;
+}
+/*Nav
+====================*/
+
+.main_nav {
+    background: rgb(252, 252, 255);
+    border-color: transparent;
+    border-radius: 0px;
+    margin-bottom: 0px;
+    z-index: 50;
+    --webkit--transition: 5s ease-in-out;
+    --moz--transition: 5s ease-in-out;
+    --o--transition: 5s ease-in-out;
+    --ms--transition: 5s ease-in-out;
+    transition: 5s ease-in-out;
+}
+.main_nav .navbar-nav>li>a {
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    color: light green;
+}
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+    background: transparent !important;
+    color: blue !important;
+}
+.main_nav .navbar-nav>li>a:hover,
+.main_nav .navbar-nav>li>a:focus {
+    color: cyan !important;
+}
+.main_nav .navbar-nav>li>a:visited{
+	color: yellow !important;
+}
+
+.main_nav .navbar-toggle {
+    border-color: blue;
+}
+.main_nav .navbar-toggle .icon-bar {
+    background: blue;
+}
+.main_nav .navbar-toggle:focus,
+.main_nav .navbar-toggle:hover {
+    background: transparent;
+}
+.navbar-default .navbar-collapse {
+    border-color: green;
+}
+.isActive {
+    position: fixed;
+    background: blue !important;
+    width: 100%;
+}
+/* Head Content
+=====================*/
+
+.header_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    overflow: hidden;
+    background: url('../img/banner/1.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+}
+.header_content:before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    bottom: 0px;
+    content: '';
+    background: rgba(0, 0, 0, .4);
+}
+div.particles_js {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+div#particles_js {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.head_content {
+    z-index: 11;
+}
+.head_content h1 {
+    font-size: 5.4rem;
+    color:light green;
+}
+.head_content h1 a {
+    color: cyan;
+    cursor: none;
+}
+.head_content h1 a:hover {
+    cursor: none;
+    text-decoration: none;
+}
+.head_content .l_btn {
+    display: inline-block;
+    border: 1px solid red;
+    font-size: 18px;
+    text-transform: capitalize;
+    padding: 8px 20px;
+    border-radius: 5px;
+    color: red;
+    margin-top: 20px;
+}
+.head_content .l_btn:hover,
+.head_content .l_btn:focus {
+    background: rgb(92, 89, 85);
+    color: red;
+}
+/*
+-----------------------------------------
+About Section
+-----------------------------------------
+*/
+
+.about_item {
+    float: left;
+    display: block;
+    margin-left: 14px;
+    font-size: 2rem;
+    margin-top: 20px;
+    text-align: center;
+    text-transform: capitalize;
+}
+.about_item i {
+    width: 100%;
+    text-align: center;
+    margin-bottom: .3em;
+    font-size: 3rem;
+}
+.about_item:hover i {
+    color: red;
+}
+.about_back img {
+    width: 100%;
+    margin-bottom: 20px;
+    max-height: 530px;
+}
+/*
+-----------------------------------------
+Services Section
+-----------------------------------------
+*/
+
+.service_item {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.service_item i {
+    margin-bottom: 20px
+}
+.service_item:hover i {
+    color: blue;
+}
+.service_item h3 {
+    text-transform: capitalize;
+}
+.service_back img {
+    width: 100%;
+}
+/*
+-----------------------------------------
+Portfolio Section
+-----------------------------------------
+*/
+/*Portfolio
+========================*/
+
+.port_item {
+    position: relative;
+    margin-bottom: 4vh;
+}
+.port_item img {
+    width: 100%;
+    height: 300px;
+}
+.port_content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    bottom: 0px;
+    background: rgba(255, 255, 255, .7);
+    text-align: center;
+    padding-top: 25%;
+    --webkit--transform: scale(0);
+    --moz--transform: scale(0);
+    --o--transform: scale(0);
+    --ms--transform: scale(0);
+    transform: scale(0);
+    --webkit--transition: .5s ease-in-out;
+    --moz--transition: .5s ease-in-out;
+    --o--transition: .5s ease-in-out;
+    --ms--transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    color: orange;
+}
+.port_item:hover .port_content {
+    --webkit--transform: scale(1);
+    --moz--transform: scale(1);
+    --o--transform: scale(1);
+    --ms--transform: scale(1);
+    transform: scale(1);
+}
+.port_content h4 {
+    text-transform: capitalize;
+}
+.port_content .icon a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid blue;
+    text-align: center;
+    line-height: 40px;
+    color: cyan;
+    font-size: 18px;
+}
+.port_content .icon a:hover {
+    background: green;
+    color: rgba(140, 116, 160, 0.363);
+}
+/*
+-----------------------------------------
+Testimonial Section
+-----------------------------------------
+*/
+
+.test_person b {
+    color: green;
+}
+/*
+.testimonial_item p span{
+  color: #22B4FF;
+}*/
+/*
+-----------------------------------------
+Contact Section
+-----------------------------------------
+*/
+
+#contact {
+    position: relative;
+}
+.form-control {
+    border-radius: 0px;
+    border-color: red transparent gold transparent;
+    box-shadow: none;
+    padding-left: 0px;
+}
+.form-control:focus {
+    border-color: red transparent orange transparent;
+    box-shadow: none;
+}
+input[type="submit"] {
+    background: blue;
+    border-color: red;
+    font-size: 18px;
+    padding: 8px 20px;
+    margin: 20px 0px 20px 0px;
+}
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+    background: grey;
+    color: yellow;
+    border-color: red;
+}
+.map_wrap {
+    margin-bottom: 20px;
+}
+.map_wrap > #map > iframe{
+    width: 100%;
+    height: 0px;
+    --webkit--transition: height .5s ease-in-out;
+    --moz--transition: height .5s ease-in-out;
+    --o--transition: height .5s ease-in-out;
+    --ms--transition: height .5s ease-in-out;
+    transition: height .5s ease-in-out;
+}
+.map_show {
+    height: 400px !important;
+    width: 100%;
+    --webkit--transition: height .5s ease-in-out;
+    --moz--transition: height .5s ease-in-out;
+    --o--transition: height .5s ease-in-out;
+    --ms--transition: height .5s ease-in-out;
+    transition: height .5s ease-in-out;
+}
+.contact_item.map {
+    cursor: pointer;
+}
+.contact_item {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+}
+.contact_item i {
+    font-size: 4rem;
+    margin: 40px 0px 20px 0px;
+    color: rgb(223, 223, 219);
+}
+.contact_item:hover i {
+    color: red;
+}
+/*
+-----------------------------------------
+Footer Section
+-----------------------------------------
+*/
+
+.footer .icon {
+    margin-bottom: 15px;
+}
+.footer .icon a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid blue;
+    margin-right: 10px;
+    color: green;
+    font-size: 18px;
+    --webkit--transition: .5s ease-in-out;
+    --moz--transition: .5s ease-in-out;
+    --o--transition: .5s ease-in-out;
+    --ms--transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
+.footer .icon a:hover,
+.footer .icon a:focus {
+    background: blue;
+    border-color: blue;
+    color: cyan;
+}
+.copy_right {
+    font-weight: 600;
+}
